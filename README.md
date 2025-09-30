@@ -10,16 +10,16 @@ This 2-hour mini-project explores AWS VPC for GatoGrowFast.com, covering VPC cre
 ## Project Execution
 
 ### 1. Set Up a Virtual Private Cloud (VPC)
-- Created `GatoVPC1` with CIDR `10.0.0.0/16`.
+- Created `gato-vpc` with CIDR `10.0.0.0/16`.
 
 ### 2. Configure Subnets within the VPC
-- Created `my-public-subnet-1` (CIDR `10.0.1.0/24`) and `my-private-subnet-1` (CIDR `10.0.2.0/24`).
+- Created `gato-public-subnet` (CIDR `10.0.1.0/24`) and `gato-private-subnet` (CIDR `10.0.2.0/24`).
 
 ### 3. Create Internet Gateway and Attach to VPC
-- Created `GatoIGW` and attached it to `GatoVPC1`.
+- Created `gato-igw` and attached it to `gato-vpc`.
 
 ### 4. Enable Internet Connectivity with Route Tables
-- Created `PublicRouteTable`, associated `my-public-subnet-1`, and added route `0.0.0.0/0` to `GatoIGW`.
+- Created `gato-public-rt`, associated `gato-public-subnet`, and added route `0.0.0.0/0` to `gato-igw`.
 
 ### 5. Enable Outbound Internet Access through NAT Gateway
 - Created `GatoNAT` in `my-private-subnet-1`, updated route table with `0.0.0.0/0` to `GatoNAT`, and associated `my-private-subnet-1`.
